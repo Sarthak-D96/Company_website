@@ -1,0 +1,70 @@
+========================================================================
+META (FACEBOOK) DOMAIN & BUSINESS VERIFICATION INSTRUCTIONS
+For SUNVALOR TECHNOLOGIES LLP
+========================================================================
+
+To enable features like WhatsApp Business API, Facebook Ads targeting, and organic post attribution, you must verify ownership of your domain in the Meta Business Manager.
+
+Below are the 3 standard verification methods. Choose the ONE that is most convenient for your setup.
+
+------------------------------------------------------------------------
+METHOD 1: Meta-tag Verification (Recommended for fast static deployment)
+------------------------------------------------------------------------
+Meta will provide you with a HTML meta tag that looks like this:
+<meta name="facebook-domain-verification" content="abcdefghijklmnopqrstuvwxyz012345" />
+
+How to apply:
+1. Open the file: WEBSITE/index.html
+2. Search for the text: "META BUSINESS DOMAIN VERIFICATION HOLDER"
+3. Replace the content attribute value "YOUR_META_VERIFICATION_TOKEN_HERE" with your actual token code (e.g. "abcdefghijklmnopqrstuvwxyz012345").
+4. Save the file and deploy it to your hosting platform (Vercel, Netlify, Firebase, etc.).
+5. Go back to Meta Business Manager and click "Verify Domain".
+
+------------------------------------------------------------------------
+METHOD 2: HTML File Upload
+------------------------------------------------------------------------
+Meta will ask you to download a verification file, typically named "something.html" (e.g., "meta12345abcdef.html"), and upload it to your website root.
+
+How to apply:
+1. Download the verification file from the Meta Business Manager.
+2. Place this downloaded file directly inside your WEBSITE/ directory:
+   WEBSITE/
+   ├── [downloaded-meta-filename].html  <-- PUT IT HERE
+   ├── index.html
+   ├── privacy.html
+   ├── terms.html
+   ├── css/
+   ├── js/
+   └── assets/
+3. Deploy the site.
+4. Verify that you can access the page in your browser by visiting:
+   https://yourdomain.com/[downloaded-meta-filename].html
+5. Go back to Meta Business Manager and click "Verify Domain".
+
+------------------------------------------------------------------------
+METHOD 3: DNS TXT Record
+------------------------------------------------------------------------
+If you do not want to change your code, you can verify via your domain registrar (GoDaddy, Namecheap, Cloudflare, Route 53, etc.).
+
+How to apply:
+1. Log in to your domain registrar account and navigate to the DNS Zone Editor / DNS Settings for your domain.
+2. Add a new record with the following settings:
+   - Type: TXT
+   - Host / Name: @ (or leave blank if it represents the root domain)
+   - TTL: 3600 (or default)
+   - Value / Text: facebook-domain-verification=[your-verification-code]
+3. Save the DNS record. (Note: DNS propagation can take from a few minutes up to 24 hours).
+4. Go back to Meta Business Manager and click "Verify Domain".
+
+========================================================================
+CRITICAL DETAILS FOR META BUSINESS VERIFICATION SUCCESS
+========================================================================
+When submitting your business details for Meta Business Verification, make sure:
+1. The legal business name matches "SUNVALOR TECHNOLOGIES LLP" exactly.
+2. The address matches:
+   HOUSE NO 986, SECTOR 64, Sector 64 Phase 10, Mohali, SAS Nagar, Punjab, 160062
+3. The phone number matches: +91 99150 44003 (or 9915044003).
+4. Legal pages are published and linked from the footer:
+   - Privacy Policy (privacy.html)
+   - Terms & Conditions (terms.html)
+   These must include your legal name and address, which they currently do.
