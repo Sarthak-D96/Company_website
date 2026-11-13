@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
   // MOBILE NAVIGATION DRAWER
   const menuToggle = document.querySelector('.menu-toggle');
@@ -8,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
       menuToggle.setAttribute('aria-expanded', !isExpanded);
       navMenu.classList.toggle('active');
-      
+
       // Toggle icon representation
       if (navMenu.classList.contains('active')) {
         menuToggle.textContent = '✕';
@@ -36,14 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
   if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      
+
       // Hide previous alerts
       successAlert.style.display = 'none';
       errorAlert.style.display = 'none';
 
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       const originalBtnText = submitBtn.textContent;
-      
+
       // Enter loading state
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending Request...';
@@ -68,12 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
       try {
         // Simulate API post request delay (1.5 seconds)
         await new Promise(resolve => setTimeout(resolve, 1500));
-        
+
         // Output successful result
         successAlert.style.display = 'block';
         successAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
         contactForm.reset();
-        
+
       } catch (err) {
         console.error('Submission error:', err);
         errorAlert.style.display = 'block';
@@ -103,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Apply reveal class targets dynamically
   const elementsToReveal = document.querySelectorAll('.service-card, .about-feature-item, .info-item, .contact-form');
-  
+
   // Apply initial inline CSS rules for transition effect
   elementsToReveal.forEach(el => {
     el.style.opacity = '0';
